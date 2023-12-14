@@ -1,0 +1,85 @@
+:root {
+    --app-dark-bg:#1a1d28;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    min-width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+
+/*---------------------------------------------*/
+/*               Map                           */
+/*---------------------------------------------*/
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/*---------------------------------------------*/
+/*               Overlay                           */
+/*---------------------------------------------*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: var(--app-dark-bg);
+    display: grid;
+    place-items: center;
+    z-index: 5555;
+}
+
+/*---------------------------------------------*/
+/*               Loader                        */
+/*---------------------------------------------*/
+.loader {
+    margin-inline: auto;
+    border: 3px solid #f3f3f3; 
+    border-top: 3px solid #3898ff;
+    border-right: 3px solid #3898ff;
+    border-bottom: 3px solid #3898ff; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 9999;
+    animation: 2s linear infinite rotate;
+}
+  
+/* @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
+@keyframes rotate {
+    from {
+        rotate: z 0deg; 
+    } to {
+        rotate: z 360deg;
+    }
+}
+
+/*---------------------------------------------*/
+/*               Mapbox                        */
+/*---------------------------------------------*/
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+  
+.mapboxgl-popup-content {
+    text-align: center;
+}
+
+.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
+    display: none !important;
+} 
